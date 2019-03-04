@@ -1,0 +1,22 @@
+<div class="container-fluid px-3 pt-5">
+  <h3 class="text-center font-weight-bold">Todo tipo de contratos pueden ser digitales</h3>
+  <div class="line mt-3 mb-5"></div>
+  <div class="row">
+    <div class="col-12 col-md-3">
+      <p class="p-3 text-center font-weight-bold pointer boxes" (mouseenter)="showDescription()" (mouseleave)="!showDescription()">LABORALES</p>
+      <p class="text-center font-weight-bold pointer text-green description" [class.showDescrip]="flag">Contratos laborales de trabajadores tanto por honorarios como en planilla</p>
+    </div>
+    <div class="col-12 col-md-3">
+      <p class="p-3 text-center font-weight-bold pointer boxes" (mouseenter)="showDescription2()" (mouseleave)="!showDescription2()">SOCIETARIOS</p>
+      <p class="text-center font-weight-bold pointer text-green description" [class.showDescrip]="flag2">El contrato de sociedad es aquel por el cual dos o más personas naturales o personas jurídicas acuerdan realizar aportaciones para conseguir un fin común</p>
+    </div>
+    <div class="col-12 col-md-3">
+      <p class="p-3 text-center font-weight-bold pointer boxes" (mouseenter)="showDescription3()" (mouseleave)="!showDescription3()">INMOBILIARIOS</p>
+      <p class="text-center font-weight-bold pointer text-green description" [class.showDescrip]="flag3">Contratos para la venta y arrendamientos de bienes inmuebles, es decir es todos aquellos bienes considerados bienes raíces</p>
+    </div>
+    <div class="col-12 col-md-3">
+      <p class="p-3 text-center font-weight-bold pointer boxes" (mouseenter)="showDescription4()" (mouseleave)="!showDescription4()">DE PRIVACIDAD</p>
+      <p class="text-center font-weight-bold pointer text-green description" [class.showDescrip]="flag4">Acuerdos de tratamiento de datos personales entre personas naturales y organizaciones, y entre instituciones</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+.description {
+  visibility: hidden;
+}
+
+.description.showDescrip {
+  visibility: visible;
+}
