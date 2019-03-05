@@ -13,6 +13,8 @@ export class FormComponent implements OnInit {
   company: string = '';
   email: string = '';
 
+  flag: boolean = false;
+
   fullNames: Observable<any[]>;
   companies: Observable<any[]>;
   emails: Observable<any[]>;

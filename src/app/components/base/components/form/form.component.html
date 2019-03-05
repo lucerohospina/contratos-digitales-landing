@@ -2,20 +2,19 @@
   <form class="pb-2 pb-md-4 pt-4 px-4" (ngSubmit)="submitForm()">
     <div class="form-group">
       <label for="fullName">Nombre Completo</label>
-      <input type="text" class="form-control" id="fullName" placeholder="entre su nombre completo" [(ngModel)]="fullName" name="fullName">
+      <input type="text" class="form-control" id="fullName" placeholder="ingrese su nombre completo" [(ngModel)]="fullName" name="fullName" [class.ipt-field-touched]="fullNameControl.touched" #fullNameControl="ngModel" required>
     </div>
     <div class="form-group">
       <label for="company">Empresa</label>
-      <input type="text" class="form-control" id="company" placeholder="entre el nombre de su empresa" [(ngModel)]="company" name="company">
+      <input type="text" class="form-control" id="company" placeholder="ingrese el nombre de su empresa" [(ngModel)]="company" name="company" [class.ipt-field-touched]="companyControl.touched" #companyControl="ngModel" required>
     </div>
     <div class="form-group">
       <label for="email">Correo electrónico</label>
-      <input type="email" class="form-control" id="email" placeholder="entre su correo electrónico" [(ngModel)]="email" name="email">
+      <input type="email" class="form-control" id="email" placeholder="ingrese su correo electrónico" [(ngModel)]="email" name="email" [class.ipt-field-touched]="emailControl.touched" #emailControl="ngModel" required>
     </div>
     <div class="text-center">
-      <button type="submit" class="btn btn-action mt-2 mt-md-4 font-weight-bold p-3">Obtener mi versión gratuita</button>
+      <button type="submit" class="btn btn-action mt-2 mt-md-4 font-weight-bold p-3" [disabled]="!flag">Obtener mi versión gratuita</button>
     </div>
     <small id="emailHelp" class="form-text text-muted text-center mt-3">No compartiremos su información</small>
   </form>
 </div>
-

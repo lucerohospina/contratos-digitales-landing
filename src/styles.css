@@ -17,12 +17,20 @@ body {
   background-color: var(--blue);
 }
 
+.bg-green {
+  background-color: var(--green);
+}
+
 .bg-gray {
   background-color: var(--gray);
 }
 
 .text-green {
   color: var(--green);
+}
+
+.text-dark-blue {
+  color: var(--blue);
 }
 
 .btn-action {
@@ -59,11 +67,13 @@ body {
 }
 
 .line {
-  border-bottom: 6px solid var(--blue);
+  /*border-bottom: 6px solid var(--blue);*/
+  border-bottom: 6px solid #000;
 }
 
 .line-light {
-  border-bottom: 6px solid var(--gray);
+  /*border-bottom: 6px solid var(--gray);*/
+  border-bottom: 6px solid #fff;
 }
 
 .boxes {
@@ -77,6 +87,22 @@ body {
   background-color: #fff;
   border:3px solid var(--green);
   filter: brightness(110%);
+}
+
+.underline {
+  border-bottom: 3px solid var(--gray);
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.underline:hover {
+  border-bottom: 3px solid var(--blue);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ipt-field-touched:invalid {
+  border: 1px solid red;
 }
 
 /* poniendo estilo italic al placeholder del input */
@@ -113,6 +139,9 @@ input::placeholder {
 @media (min-width: 992px) {
   .second-form .card form {
     width: 35rem;
+  }
+  .underline-2 {
+    border-bottom: 3px solid var(--gray);
   }
 }
 
