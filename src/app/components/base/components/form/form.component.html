@@ -1,5 +1,5 @@
 <div class="card border-0">
-  <form class="pb-2 pb-md-4 pt-4 px-4" (ngSubmit)="submitForm()">
+  <form class="pb-2 pb-md-4 pt-4 px-4" (ngSubmit)="submitForm()" #f="ngForm">
     <div class="form-group">
       <label for="fullName">Nombre Completo</label>
       <input type="text" class="form-control" id="fullName" placeholder="ingrese su nombre completo" [(ngModel)]="fullName" name="fullName" [class.ipt-field-touched]="fullNameControl.touched" #fullNameControl="ngModel" required>
@@ -10,10 +10,13 @@
     </div>
     <div class="form-group">
       <label for="email">Correo electrónico</label>
-      <input type="email" class="form-control" id="email" placeholder="ingrese su correo electrónico" [(ngModel)]="email" name="email" [class.ipt-field-touched]="emailControl.touched" #emailControl="ngModel" required>
+      <input type="email" class="form-control" id="email" placeholder="ingrese su correo electrónico" [(ngModel)]="email" name="email" [class.ipt-field-touched]="emailControl.touched" #emailControl="ngModel" [ngClass]="{ 'is-invalid': f.submitted && emailControl.invalid }" required>
+      <div *ngIf="f.submitted && emailControl.invalid" class="invalid-feedback">
+        <div *ngIf="f.submitted && emailControl.invalid">Ingrese una dirección de correo electrónico válida</div>
+      </div>
     </div>
     <div class="text-center">
-      <button type="submit" class="btn btn-action mt-2 mt-md-4 font-weight-bold p-3" [disabled]="!flag">Obtener mi versión gratuita</button>
+      <button type="submit" class="btn btn-action mt-2 mt-md-4 font-weight-bold p-3" [disabled]="fullNameControl.invalid || companyControl.invalid || emailControl.invalid">Obtener mi versión gratuita</button>
     </div>
     <small id="emailHelp" class="form-text text-muted text-center mt-3">No compartiremos su información</small>
   </form>
