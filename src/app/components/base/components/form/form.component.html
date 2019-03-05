@@ -10,10 +10,7 @@
     </div>
     <div class="form-group">
       <label for="email">Correo electrónico</label>
-      <input type="email" class="form-control" id="email" placeholder="ingrese su correo electrónico" [(ngModel)]="email" name="email" [class.ipt-field-touched]="emailControl.touched" #emailControl="ngModel" [ngClass]="{ 'is-invalid': f.submitted && emailControl.invalid }" required>
-      <div *ngIf="f.submitted && emailControl.invalid" class="invalid-feedback">
-        <div *ngIf="f.submitted && emailControl.invalid">Ingrese una dirección de correo electrónico válida</div>
-      </div>
+      <input type="email" class="form-control" id="email" placeholder="ingrese su correo electrónico" [(ngModel)]="email" name="email" [class.ipt-field-touched]="emailControl.touched" #emailControl="ngModel" required>
     </div>
     <div class="text-center">
       <button type="submit" class="btn btn-action mt-2 mt-md-4 font-weight-bold p-3" [disabled]="fullNameControl.invalid || companyControl.invalid || emailControl.invalid">Obtener mi versión gratuita</button>
